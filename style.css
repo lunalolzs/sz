@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  background: #f4c2c2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* card */
+.card {
+  position: relative;
+  z-index: 1;
+
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.8);
+
+  text-align: center;
+  color: #5c2a2a;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 10px 0;
+  padding: 12px;
+
+  border-radius: 20px;
+  text-decoration: none;
+
+  background: white;
+  color: #5c2a2a;
+}
+
+.links a:hover {
+  background: #ffeaea;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+/* ✨ estrelas */
+.star {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+
+  background: white;
+  border-radius: 50%;
+  opacity: 0.6;
+
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* 🎧 player */
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: rgba(255,255,255,0.7);
+  padding: 10px;
+  border-radius: 20px;
+
+  display: flex;
+  gap: 10px;
+}
+
+#playBtn {
+  border: none;
+  background: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+#volumeControl {
+  width: 80px;
+}
+
+/* 🌙 BIO ESQUERDA */
+.bio-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* ✔ CORRIGIDO */
+  z-index: 9999;
+}
+
+/* 💖 CARD BIO */
+.bio-card {
+  width: 280px;
+  padding: 16px 18px;
+
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+
+  font-family: "Pacifico", "Quicksand", cursive;
+  font-size: 13px;
+  line-height: 1.6;
+
+  color: #5c2a2a;
+
+  animation: floatBreath 4s ease-in-out infinite;
+}
+
+/* 🌸 animação viva */
+@keyframes floatBreath {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* ❌ botão */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+/* esconder */
+.hide {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: 0.4s ease;
+}

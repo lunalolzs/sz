@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>lunalol</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+  <img src="https://i.pinimg.com/1200x/e0/19/5c/e0195ce048e591467be6fc238b3a80aa.jpg" class="avatar">
+
+  <h1>lunalol</h1>
+
+  <div class="links">
+
+    <a href="#" target="_blank">
+      <img src="https://t4.ftcdn.net/jpg/04/87/48/35/360_F_487483543_uUsFUlazQwXn1qCmip8Cu4P504Hj8dZk.jpg" class="icon">
+      Gestão & Análise de Dados
+    </a>
+
+    <a href="https://www.imdb.com/pt/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" class="icon">
+      Reviewer oficial by IMDb
+    </a>
+
+    <a href="https://discord.gg/leagueofhu3br" target="_blank">
+      <img src="https://pbs.twimg.com/profile_images/1952907763366920193/RdCvd5Fn_400x400.jpg" class="icon">
+      MOD Call in League of HU3
+    </a>
+
+    <a href="https://discord.gg/leagueofhu3br" target="_blank">
+      <img src="https://pbs.twimg.com/profile_images/1952907763366920193/RdCvd5Fn_400x400.jpg" class="icon">
+      Aux. Divulgação in League of HU3
+    </a>
+
+    <a href="https://discord.gg/leagueofhu3br" target="_blank">
+      <img src="https://pbs.twimg.com/profile_images/1952907763366920193/RdCvd5Fn_400x400.jpg" class="icon">
+      Equipe Eventos in League of HU3
+    </a>
+
+  </div>
+</div>
+
+<!-- 🌙 BIO -->
+<div class="bio-float" id="bioFloat">
+  <div class="bio-card">
+    <button class="close-btn" onclick="toggleBio()">✕</button>
+
+    <p>
+      alguém muito curiosa pelo universo da tecnologia e por tudo que envolve o mundo digital. Gosto de entender como as coisas funcionam por trás das telas e transformar isso em algo mais leve, visual e com identidade.<br><br>
+
+      No meu dia a dia, transito entre responsabilidade e criatividade, entre organização e caos criativo da internet. Às vezes estou imersa em tarefas e projetos, outras vezes apenas explorando ideias, referências e novas formas de expressão.<br><br>
+
+      No fim, sou alguém que tenta equilibrar lógica e sensibilidade, sempre buscando sentido nas conexões que surgem dentro desse mundo digital que faz parte da minha vida.
+    </p>
+  </div>
+</div>
+
+<!-- 🎧 player -->
+<div class="music-player">
+  <button id="playBtn">♡</button>
+  <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5">
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
