@@ -1,57 +1,51 @@
-/* ✨ estrelas */
-for (let i = 0; i < 30; i++) {
+/* estrelas */
+for (let i = 0; i < 40; i++) {
   const star = document.createElement("div");
   star.className = "star";
 
+  const size = 3 + Math.random() * 4;
+  star.style.width = size + "px";
+  star.style.height = size + "px";
+
   star.style.left = Math.random() * 100 + "vw";
-  star.style.animationDuration = (5 + Math.random() * 5) + "s";
+  star.style.animationDuration = (4 + Math.random() * 6) + "s";
 
   document.body.appendChild(star);
 }
 
-/* 🎧 música */
+/* música */
 const music = document.getElementById("bgMusic");
 const playBtn = document.getElementById("playBtn");
 const volumeControl = document.getElementById("volumeControl");
 
 let isPlaying = false;
 
-playBtn.addEventListener("click", () => {
+playBtn.onclick = () => {
   if (!isPlaying) {
-    music.play().catch(() => {
-      alert("Clique novamente para ativar o áudio 💖");
-    });
+    music.play();
     playBtn.textContent = "❚❚";
   } else {
     music.pause();
     playBtn.textContent = "♡";
   }
   isPlaying = !isPlaying;
-});
+};
 
-volumeControl.addEventListener("input", () => {
+volumeControl.oninput = () => {
   music.volume = volumeControl.value;
-});
+};
 
-/* 🌙 BIO */
+/* bio */
 const bio = document.getElementById("bioFloat");
 
-bio.classList.add("hide");
-
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    bio.classList.remove("hide");
-  }, 1500);
-});
+window.onload = () => {
+  setTimeout(() => bio.classList.remove("hide"), 1200);
+};
 
 function toggleBio() {
   bio.classList.toggle("hide");
 }
 
-const avatar = document.querySelector(".avatar");
-
-if (avatar) {
-  avatar.addEventListener("click", () => {
-    bio.classList.remove("hide");
-  });
-}
+document.querySelector(".avatar").onclick = () => {
+  bio.classList.remove("hide");
+};
